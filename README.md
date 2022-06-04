@@ -52,3 +52,5 @@ grpc-proxy ./gRpcHelloServer
 grpc-proxy ./gRpcHelloClient
 2022/06/04 14:17:01 Hello response hello
 ```
+
+more infos pls refer to https://github.com/mwitkow/grpc-proxy
