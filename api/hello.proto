@@ -1,0 +1,21 @@
+syntax = "proto3";
+// package name
+package grpc.proxy.hello.v1;
+option go_package = "v1";
+
+// hello service
+service HelloService {
+  // hello rpc
+  rpc Hello (HelloRequest) returns (HelloResponse) {}
+}
+
+// request
+message HelloRequest {
+  string message = 1;
+}
+
+// response
+message HelloResponse {
+  int64 code = 1;
+  string message = 2;
+}

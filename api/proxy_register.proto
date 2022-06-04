@@ -1,0 +1,24 @@
+syntax = "proto3";
+// package name
+package grpc.proxy.v1;
+option go_package = "v1";
+
+// hello service
+service ProxyRegisterService {
+  // register rpc
+  rpc Register (RegisterRequest) returns (RegisterResponse) {}
+}
+
+// request
+message RegisterRequest {
+  // grpc service name, name is '_XXXService_serviceDesc.ServiceName'
+  string service_name = 1;
+  // endpoint for service
+  string endpoint = 2;
+  // enable service or not
+  bool enable = 3;
+}
+
+// response
+message RegisterResponse {
+}
