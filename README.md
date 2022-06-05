@@ -1,5 +1,5 @@
 # grpc-proxy
-    gRpchelloClient ----> gRpcProxy ----> gRpcHelloServer
+    gRpcHelloClient ----> gRpcProxy ----> gRpcHelloServer
                           ^                    |
                           |______register______|
 # building
@@ -17,7 +17,7 @@ go build -o gRpcProxy internal/main.go
   - internal/proxy/internal/api/proxy_register_impl.go
 * forward service
   - receive register request from 'gRpcHelloServer'
-  - forward request of '/grpc.proxy.hello.v1.HelloService/Hello' from 'gRpchelloClient' to 'gRpcHelloServer'
+  - forward request of '/grpc.proxy.hello.v1.HelloService/Hello' from 'gRpcHelloClient' to 'gRpcHelloServer'
   * param fullMethodName for Director like '/grpc.proxy.hello.v1.HelloService/Hello'
   * parse service name to 'grpc.proxy.hello.v1.HelloService' and forward to 'gRpcHelloServer'
 * running log
